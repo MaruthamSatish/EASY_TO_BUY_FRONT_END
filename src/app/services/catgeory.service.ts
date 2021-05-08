@@ -8,9 +8,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CatgeoryService {
-  private categoryURl="http://localhost:8084";
+  private categoryURl="http://localhost:9093";
   constructor(private httpClient :HttpClient) { }
   getCategoryList():Observable<Category[]>{
-    return this.httpClient.get<Category[]>(`${this.categoryURl}/api/categories`);
+    return this.httpClient.get<Category[]>(`${this.categoryURl}/api/category`);
        }
     }

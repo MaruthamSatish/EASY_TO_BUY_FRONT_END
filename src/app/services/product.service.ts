@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsURl="http://localhost:8082";
+  private productsURl="http://localhost:9091";
  
 
   constructor(private httpClient :HttpClient) { }
@@ -16,7 +16,9 @@ export class ProductService {
     return this.httpClient.get<Product[]>(`${this.productsURl}/api/products`);
   }
   getProdsByCatId(categoryId):Observable<any>{
-    return this.httpClient.get(`${this.productsURl}/api/products/${categoryId}`);
+    return this.httpClient.get(`${this.productsURl}/api/products//category/${categoryId}`);
   }
-  
+  getProductById(productId):Observable<any>{
+    return this.httpClient.get(`${this.productsURl}/api/products/${productId}`);
+  }
 }

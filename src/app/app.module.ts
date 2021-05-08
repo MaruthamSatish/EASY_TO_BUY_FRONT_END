@@ -12,6 +12,8 @@ import { ProductGridComponent } from './product-grid/product-grid.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule}  from '@angular/common/http';
 import { CatgeoryService } from './services/catgeory.service';
+import { RatingModule } from 'ng-starrating';
+import { CartStatusComponent } from './cart-status/cart-status.component';
 
 
 @NgModule({
@@ -21,12 +23,14 @@ import { CatgeoryService } from './services/catgeory.service';
     FooterComponent,
     ProductComponent,
     ProductGridComponent,
-    HomeComponent
+    HomeComponent,
+    CartStatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RatingModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [CatgeoryService],
